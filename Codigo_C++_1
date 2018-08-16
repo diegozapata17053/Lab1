@@ -1,0 +1,148 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+#define ALPHA 1.24
+#define lib_func1()
+
+extern unsigned int var;
+
+void calcParabolico(void);
+void print_results(void);
+float a1, vx0, vy0, v0, x, y, vx, vy, t;
+
+
+
+int main()
+{
+    unsigned short int tresdes = -5;  //
+    
+    int var = 100;
+
+    var += tresdes;
+
+    //Calculando los parametros en la Tierra con g = 9.8 m/s*s
+    calcParabolico();
+    print_results();
+
+    //Calculando los parametros en la Luna con g = 1.62 m/s*s
+    calcParabolico();
+    print_results();
+
+
+    return 0;
+}
+
+void calcParabolico(void)
+{
+    const float g = 9.8;
+    
+    vx0 = v0 * cos(ALPHA);
+    vy0 = v0 * sin(ALPHA);
+
+    vx = vx0;
+    vy = vy0-g*t;
+
+    x = vx*t;
+    y = a1+vy0*t-(g*pow(t,2)/2);
+}
+
+void print_results(void)
+{
+    std::cout<<"Los resultados del calculo parabolico son: "<<std::endl;
+    std::cout<<"Velocidad en x: "<<vx<<", ";
+    std::cout<<"Velocidad en y: "<<vy<<", ";
+    std::cout<<"Posicion en x: "<<x<<", ";
+    std::cout<<"Posicion en y: "<<y<<std::endl;
+}
+
+void otros_calculos(void)
+{
+    /* Serie simple (1/[(x^2) + (x+1)]) para x entre 1 y 199*/    
+    for(int x=1; x<200; x++);
+}
+        //Agregue aqui la formula
+int main()
+{
+    int x=1;
+    int resultado=0;
+    for(x=1; x<200; x++);
+   { 
+        resultado = (1/((x^2) + (x+1)));
+        
+        printf ("%d\n ",resultado);
+     
+         return 0;   
+}
+    
+}    /* Volumen de la esfera */
+      //Agregue aqui la formula
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    double r=0;
+    double volEsfera =0;
+    const double pi = 3.141593;
+   //Ingresar Datos
+    printf("\n\Ingrese radio de la esfera, en Metros: ");
+    scanf("%lf", &r);
+    //Formula para realizar el Calculo
+    volEsfera = 4/3 * pi * pow(r, 3);
+    printf("\n\tEl volumen de la esfera es %lf Metros cubicos.\n\n", volEsfera,163);
+    return 0;
+}
+    /* Raices de la ecuacion (3*x^2) + (5*x) + 8  = 0 */
+      //Agregue aqui la formula
+#include <stdio.h>
+#include <math.h>
+ 
+int main()
+{
+    int a,b,c,d;
+    float x,y;
+ 
+    printf("Ingrese coeficiente a: ");
+    scanf("%d",&a);
+ 
+    while (a == 0) {
+        printf("Ingrese coeficiente a: ");
+        scanf("%d",&a);
+    }
+ 
+    printf("Ingrese coeficiente b: ");
+    scanf("%d",&b);
+    printf("Ingrese coeficiente c: ");
+    scanf("%d",&c);
+ 
+    d = b*b-4*a*c;
+    if (d > 0) {
+        x = (-b+sqrt(d))/(2*a);
+        y = (-b-sqrt(d))/(2*a);
+        printf("x1 = %.2f\n",x);
+        printf("x2 = %.2f\n",y);
+    }
+    else if (d == 0) {
+        x = (-b)/(2*a);
+        printf("x1 = %.2f\n",x);
+    }
+    else
+        printf("La ecuacion no tiene solucion");
+ 
+    return 0;
+}
+    /* Impedancia típica de una línea de transmisión
+     * Z0 = [(R+wL)/(G+wC)]^(1/2)
+     * w = frecuencia angular = 2*pi*f, f = 10kHz */
+        //Agregue aqui la formula
+
+    /* Constante de fase de una fibra optica
+     * B = {[((a^2)-(b^2))*c+(b^2)]^(1/2)}*betacero
+     * betacero = w*(mu*epsi)^(1/2)
+     * w = frecuencia angular = 2*pi*f, f = 5GHz
+     * mu = 0.00000125664
+     * epsi = 0.00000000000088542  */
+
+}
