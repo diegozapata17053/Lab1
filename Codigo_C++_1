@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-
+//////////
 using namespace std;
 
 #define ALPHA 1.24
